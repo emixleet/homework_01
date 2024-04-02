@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benimle Çıkar mısın?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Benimle Çıkar mısın?</h1>
+        <p>Sec birini.</p>
+        <div class="button-container">
+            <button class="button" id="yesButton">Evet</button>
+            <button class="button" id="noButton">Hayır</button>
+        </div>
+        <img id="yuppiiImage" src="" alt="">
+    </div>
+
+    <script>
+        document.getElementById("yesButton").addEventListener("click", function() {
+            window.location.href = "yuppii.html"; // Yuppii.html sayfasına yönlendirme
+        });
+
+        document.getElementById("noButton").addEventListener("mouseover", function() {
+            var newX = Math.random() * (window.innerWidth - this.offsetWidth);
+            var newY = Math.random() * (window.innerHeight - this.offsetHeight);
+            this.style.position = "absolute";
+            this.style.left = newX + "px";
+            this.style.top = newY + "px";
+        });
+    </script>
+</body>
+</html>
